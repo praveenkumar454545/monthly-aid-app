@@ -1,0 +1,45 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default-deny all reads and writes.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Allow public read access to most collections.
+    // This is for displaying public data like beneficiaries, villages, donations, and monthly totals.
+    match /beneficiaries/{beneficiaryId} {
+      allow read: if true;
+      // Allow write only for specific, trusted server-side flows (not implemented here)
+    }
+
+    match /villages/{villageId} {
+      allow read: if true;
+      allow update: if request.auth != null; // Allow admin updates
+    }
+    
+    match /apdata/{villageId} {
+      allow read: if true;
+      allow update: if request.auth != null; // Allow admin updates
+    }
+
+    match /donations/{donationId} {
+        allow read: if true;
+        allow create: if true; // Allow anyone to log a donation pledge
+    }
+
+    match /monthlyTotals/{monthId} {
+        allow read: if true;
+        allow write: if true; // Allow server-side aggregation
+    }
+
+    // Rules for user-specific data
+    match /users/{userId} {
+      // Allow a user to create their own profile
+      allow create: if request.auth.uid == userId;
+      // Allow a user to read or update their own data
+      allow read, update: if request.auth.uid == userId;
+    }
+  }
+}

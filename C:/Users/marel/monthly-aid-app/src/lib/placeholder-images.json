@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "beneficiary-1",
+      "description": "A portrait of Lakshmi Devi and her children.",
+      "imageUrl": "https://picsum.photos/seed/1/600/400",
+      "imageHint": "indian mother children"
+    },
+    {
+      "id": "beneficiary-2",
+      "description": "Elderly farmer Mohan Das in his field.",
+      "imageUrl": "https://picsum.photos/seed/2/600/400",
+      "imageHint": "indian farmer"
+    },
+    {
+      "id": "beneficiary-3",
+      "description": "A young girl, Rina, studying.",
+      "imageUrl": "https://picsum.photos/seed/3/600/400",
+      "imageHint": "indian student girl"
+    },
+    {
+      "id": "beneficiary-4",
+      "description": "A community kitchen preparing food.",
+      "imageUrl": "https://picsum.photos/seed/4/600/400",
+      "imageHint": "community kitchen"
+    },
+    {
+      "id": "beneficiary-5",
+      "description": "A young boy, Gopal, needing medical care.",
+      "imageUrl": "https://picsum.photos/seed/5/600/400",
+      "imageHint": "indian child sick"
+    }
+  ]
+}
