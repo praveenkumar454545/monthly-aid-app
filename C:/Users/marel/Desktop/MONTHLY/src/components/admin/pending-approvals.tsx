@@ -116,5 +116,3 @@ export function PendingApprovals({ beneficiaries, setBeneficiaries }: PendingApp
         </Card>
     )
 }
-
-    

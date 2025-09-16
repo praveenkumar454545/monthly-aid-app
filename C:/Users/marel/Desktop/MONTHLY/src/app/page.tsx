@@ -5,7 +5,8 @@ import {
   Search,
   Users,
   Info,
-  ChevronDown
+  ChevronDown,
+  CheckCircle,
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -268,5 +269,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-    
